@@ -795,7 +795,8 @@
       <small>Saturdays &amp; Sundays · Hamilton &amp; Stoney Creek · From $350 labour</small>
     </div>
   </div>
-    <!-- ===== Блок отзывов без фото: вставьте целиком в нужное место сайта ===== -->
+<!-- ===== Блок отзывов (7 карточек): вставьте целиком, вместо предыдущего блока ===== -->
+<!-- ВАЖНО: тексты и имена ниже примерные. Перед публикацией замените на отзывы реальных клиентов. -->
 <section class="pr-reviews" aria-labelledby="pr-title">
   <style>
     .pr-reviews{
@@ -812,6 +813,7 @@
     .pr-rating{display:inline-flex;align-items:center;gap:10px;color:var(--pr-muted);font-size:16px}
     .pr-rating .pr-stars{font-size:22px}
     .pr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .pr-grid .pr-card:last-child:nth-child(odd){grid-column:1/-1}
     .pr-card{
       position:relative;background:var(--pr-card);border-radius:16px;
       padding:34px 30px 26px;border:1px solid var(--pr-line);
@@ -845,20 +847,18 @@
       <h2 id="pr-title">What our clients say</h2>
       <div class="pr-rating">
         <span class="pr-stars" aria-hidden="true">★★★★★</span>
-        <span>Rated 4.5 out of 5 by our clients</span>
+        <span>Rated 4.7 out of 5 by our clients</span>
       </div>
     </div>
 
     <div class="pr-grid">
+
       <article class="pr-card">
         <div class="pr-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="pr-text">We needed our apartment ready to sell fast. They finished on schedule, worked neatly, and there was no paint smell the next day. Buyers commented on how fresh and clean the walls looked.</p>
         <div class="pr-author">
           <div class="pr-avatar" aria-hidden="true">J</div>
-          <div>
-            <div class="pr-name">Jennifer L.</div>
-            <div class="pr-meta">Apartment repaint</div>
-          </div>
+          <div><div class="pr-name">Jennifer L.</div><div class="pr-meta">Apartment repaint</div></div>
         </div>
       </article>
 
@@ -867,12 +867,55 @@
         <p class="pr-text">Great quality on the kitchen walls and ceiling. They started an hour late, but let us know in advance. I'm very happy with the result: smooth coverage with no streaks.</p>
         <div class="pr-author">
           <div class="pr-avatar" aria-hidden="true">M</div>
-          <div>
-            <div class="pr-name">Michael T.</div>
-            <div class="pr-meta">Kitchen walls &amp; ceiling</div>
-          </div>
+          <div><div class="pr-name">Michael T.</div><div class="pr-meta">Kitchen walls &amp; ceiling</div></div>
         </div>
       </article>
+
+      <article class="pr-card">
+        <div class="pr-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="pr-text">Hired them to repaint our entire first floor, including the stairwell and high ceilings. They brought their own scaffolding and finished ahead of schedule. Not a single drip on the floors.</p>
+        <div class="pr-author">
+          <div class="pr-avatar" aria-hidden="true">R</div>
+          <div><div class="pr-name">Robert H.</div><div class="pr-meta">Full first floor</div></div>
+        </div>
+      </article>
+
+      <article class="pr-card">
+        <div class="pr-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="pr-text">I was nervous about picking a bold accent wall color, but the team gave great advice and it turned out stunning. They were friendly, tidy, and answered all my questions.</p>
+        <div class="pr-author">
+          <div class="pr-avatar" aria-hidden="true">A</div>
+          <div><div class="pr-name">Amanda P.</div><div class="pr-meta">Accent wall</div></div>
+        </div>
+      </article>
+
+      <article class="pr-card">
+        <div class="pr-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="pr-text">Fair price, fast quote, and quality work. They used low-VOC paint since we have a newborn at home, and the house was livable the same evening.</p>
+        <div class="pr-author">
+          <div class="pr-avatar" aria-hidden="true">C</div>
+          <div><div class="pr-name">Chris B.</div><div class="pr-meta">Low-VOC repaint</div></div>
+        </div>
+      </article>
+
+      <article class="pr-card">
+        <div class="pr-stars" role="img" aria-label="4 out of 5 stars">★★★★<span class="off">★</span></div>
+        <p class="pr-text">They repainted our kitchen cabinets and trim. The finish is smooth and durable. One small touch-up was needed after the final walkthrough, but they came back the next morning and fixed it.</p>
+        <div class="pr-author">
+          <div class="pr-avatar" aria-hidden="true">L</div>
+          <div><div class="pr-name">Laura G.</div><div class="pr-meta">Cabinets &amp; trim</div></div>
+        </div>
+      </article>
+
+      <article class="pr-card">
+        <div class="pr-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="pr-text">Third time using this company and they never disappoint. Reliable, respectful of our home, and the lines between colors are razor sharp. They're the only painters I trust.</p>
+        <div class="pr-author">
+          <div class="pr-avatar" aria-hidden="true">T</div>
+          <div><div class="pr-name">Thomas W.</div><div class="pr-meta">Returning client</div></div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
