@@ -980,10 +980,34 @@ src="https://www.facebook.com/tr?id=2147416065872518&ev=PageView&noscript=1"
     els.forEach(function(el){ if (!el.classList.contains('in')) io.observe(el); });
   })();
 </script>
+<style>
+.sticky-cta{display:none}
+@media (max-width:768px){
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:999;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);box-shadow:0 -2px 12px rgba(0,0,0,.14)}
+  .sticky-cta a{flex:1;text-align:center;padding:13px 8px;border-radius:10px;font-weight:600;text-decoration:none;font-size:15px}
+  .sticky-cta .sc-quote{background:var(--forest);color:#fff}
+  .sticky-cta .sc-call{background:#fff;color:var(--forest);border:2px solid var(--forest)}
+  body{padding-bottom:66px}
+}
+</style>
+<div class="sticky-cta">
+  <a class="sc-quote" href="#quote">Get a fixed quote</a>
+  <a class="sc-call" href="tel:+14375515149">Call 437-551-5149</a>
+</div>
 <script>
 document.addEventListener('click', function (e) {
-  var a = e.target.closest('a[href*="tally.so"]');
-  if (a && typeof fbq === 'function') { fbq('track', 'Lead'); }
+  var a = e.target.closest('a');
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  function ga(name){ if (typeof gtag === 'function') { gtag('event', name, {link_url: href}); } }
+  if (href === '#quote' || href.indexOf('tally.so') !== -1) {
+    ga('quote_click');
+    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+  } else if (href.indexOf('tel:') === 0) {
+    ga('phone_click');
+  } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+    ga('whatsapp_click');
+  }
 });
 </script>
 </body>
